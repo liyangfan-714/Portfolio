@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    个人机械设计作品集
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft Yahei",sans-serif;}
+        body{background:#0f172a;color:#f1f5f9;line-height:1.6;}
+        .container{width:90%;max-width:1200px;margin:0 auto;}
+
+        /* 导航栏 */
+        nav{width:100%;padding:20px 0;position:sticky;top:0;background:#0f172a/95;z-index:99;}
+        .nav-container{display:flex;justify-content:space-between;align-items:center;}
+        .logo{font-size:22px;font-weight:bold;color:#38bdf8;}
+        .nav-list{display:flex;gap:30px;list-style:none;}
+        .nav-list li a{color:#fff;text-decoration:none;font-size:15px;transition:0.3s;}
+        .nav-list li a:hover{color:#38bdf8;}
+
+        /* 头部简介 */
+        .hero{padding:60px 0;text-align:center;}
+        .hero h1{font-size:42px;margin-bottom:15px;}
+        .hero p{color:#94a3b8;font-size:18px;max-width:800px;margin:0 auto;}
+
+        /* 通用栏目样式 */
+        .section{padding:70px 0;border-bottom:1px solid #1e293b;}
+        .section-top{margin-bottom:40px;}
+        .section-top .num{color:#facc15;font-weight:bold;font-size:16px;}
+        .section-top h2{font-size:32px;margin:8px 0;}
+        .section-top p{color:#94a3b8;}
+
+        /* 项目卡片布局 */
+        .project-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(350px,1fr));gap:30px;}
+        .project-card{background:#1e293b;border-radius:12px;overflow:hidden;transition:0.3s;position:relative;}
+        .project-card:hover{transform:translateY(-8px);box-shadow:0 10px 30px #00000040;}
+
+        /* 黄色视频按钮（和你截图一模一样） */
+        .video-btn{position:absolute;top:12px;left:12px;background:#facc15;color:#000;padding:4px 10px;border-radius:4px;font-size:13px;font-weight:bold;z-index:10;}
+        .project-img{width:100%;height:220px;overflow:hidden;position:relative;cursor:pointer;}
+        .project-img img{width:100%;height:100%;object-fit:cover;transition:0.5s;}
+        .project-card:hover .project-img img{transform:scale(1.05);}
+
+        /* 视频弹窗隐藏默认 */
+        .project-img iframe{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;height:80vh;z-index:999;border:none;border-radius:8px;background:#000;}
+        .project-img.active iframe{display:block;}
+
+        .project-info{padding:20px;}
+        .project-info h3{font-size:20px;margin-bottom:12px;}
+        .project-info p{color:#94a3b8;font-size:14px;margin-bottom:15px;}
+        .tag-group{display:flex;flex-wrap:wrap;gap:8px;}
+        .tag{background:#334155;padding:3px 10px;border-radius:20px;font-size:12px;color:#38bdf8;}
+
+        /* 底部 */
+        footer{text-align:center;padding:40px 0;color:#64748b;font-size:14px;}
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav>
+        <div class="container nav-container">
+            <div class="logo">作品集</div>
+            <ul class="nav-list">
+                <li><a href="#part1">非标机构设计</a></li>
+                <li><a href="#part2">SW建模</a></li>
+                <li><a href="#part3">工程图&BOM</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 首页简介 -->
+    <div class="hero container">
+        <h1>机械设计 · 个人作品集</h1>
+        <p>专注非标自动化结构设计、三维建模、工程图纸绘制与BOM清单整理，以下为个人独立完成实训与设计项目，含实物结构、三维模型、整套图纸设计流程。</p>
+    </div>
+
+    <!-- 01 非标机构设计 -->
+    <section id="part1" class="section container">
+        <div class="section-top">
+            <div class="num">01 / 03</div>
+            <h2>非标机构设计</h2>
+            <p>独立完成输送、夹紧、升降等自动化非标机构整体方案设计、结构布局、标准件选型，适配实训设备工作场景。</p>
+        </div>
+        <div class="project-grid">
+            <!-- 项目卡片 自行复制增加 -->
+            <div class="project-card">
+                <div class="video-btn">视频演示</div>
+                <div class="project-img" onclick="this.classList.toggle('active')">
+                    <img src="assets/img/mech1.jpg" alt="非标输送机构">
+                    <iframe src="https://player.bilibili.com/player.html?bvid=替换成你的BV号"></iframe>
+                </div>
+                <div class="project-info">
+                    <h3>非标自动化输送机构设计</h3>
+                    <p>根据设备输送需求完成整体结构布局，完成导轨、丝杆、电机选型，确定传动方案，实现平稳输送、精准定位功能。</p>
+                    <div class="tag-group">
+                        <span class="tag">非标结构</span>
+                        <span class="tag">传动设计</span>
+                        <span class="tag">标准件选型</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 02 SolidWorks建模 -->
+    <section id="part2" class="section container">
+        <div class="section-top">
+            <div class="num">02 / 03</div>
+            <h2>SolidWorks三维建模</h2>
+            <p>熟练使用SolidWorks完成零件建模、特征绘制、整体装配、干涉检查、模型渲染，输出完整三维模型文件。</p>
+        </div>
+        <div class="project-grid">
+            <div class="project-card">
+                <div class="video-btn">视频演示</div>
+                <div class="project-img" onclick="this.classList.toggle('active')">
+                    <img src="assets/img/sw1.jpg" alt="三维模型装配">
+                    <iframe src="https://player.bilibili.com/player.html?bvid=替换成你的BV号"></iframe>
+                </div>
+                <div class="project-info">
+                    <h3>多零件机构三维建模与装配</h3>
+                    <p>独立完成异形零件拉伸、切除、孔位、阵列等特征建模，完成整机装配、间隙调整、干涉检测，保证结构可实际装配使用。</p>
+                    <div class="tag-group">
+                        <span class="tag">SolidWorks</span>
+                        <span class="tag">零件建模</span>
+                        <span class="tag">整机装配</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 03 工程图与BOM清单 -->
+    <section id="part3" class="section container">
+        <div class="section-top">
+            <div class="num">03 / 03</div>
+            <h2>工程图与BOM清单</h2>
+            <p>按照机械制图标准出二维工程图，包含尺寸标注、公差、技术要求、视图排版，自动生成并整理BOM物料清单。</p>
+        </div>
+        <div class="project-grid">
+            <div class="project-card">
+                <div class="video-btn">视频演示</div>
+                <div class="project-img" onclick="this.classList.toggle('active')">
+                    <img src="assets/img/drawing1.jpg" alt="工程图绘制">
+                    <iframe src="https://player.bilibili.com/player.html?bvid=替换成你的BV号"></iframe>
+                </div>
+                <div class="project-info">
+                    <h3>整套工程图绘制与BOM整理</h3>
+                    <p>完成零件图、装配图出图，规范标注尺寸、形位公差、表面粗糙度，统计所有零部件规格、数量，输出可直接投产的BOM清单。</p>
+                    <div class="tag-group">
+                        <span class="tag">机械制图</span>
+                        <span class="tag">尺寸公差</span>
+                        <span class="tag">BOM清单</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        个人机械设计作品集 | GitHub Pages 免费展示
+    </footer>
+</body>
+</html>
